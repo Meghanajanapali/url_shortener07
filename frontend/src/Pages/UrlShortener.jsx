@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { Button, Container, TextInput } from '@mantine/core';
-import { Text,Stack, Center  } from '@mantine/core';
+import { Text,Stack, Center, Anchor  } from '@mantine/core';
 import Service from '../utils/http';
 const service=new Service();
 export default function UrlShortener() {
@@ -25,7 +25,12 @@ export default function UrlShortener() {
   return (
     
         <Container size={"xs"}>
-            {response ? <>{service.getBaseURL() + "/api/s/"+ response.shortCode}</> :
+            {response ? <>
+            hi
+                <Anchor href={`service.getBaseURL()"/api/s`+ `{response.shortCode}`}>
+                    Shortened URL 
+                </Anchor> 
+            </> :
             <Stack m="xl">
         <Text size="30px">Shorten Your Url here</Text>
         <TextInput required  label="Original url"
