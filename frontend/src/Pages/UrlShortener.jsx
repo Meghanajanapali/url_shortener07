@@ -25,7 +25,7 @@ export default function UrlShortener() {
   return (
     
         <Container size={"xs"}>
-            {response ? <>{service.getBaseURL() + "/api/s"+ response.shortCode}</> :
+            {response ? <>{service.getBaseURL() + "/api/s/"+ response.shortCode}</> :
             <Stack m="xl">
         <Text size="30px">Shorten Your Url here</Text>
         <TextInput required  label="Original url"
